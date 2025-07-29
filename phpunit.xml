@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+        bootstrap="vendor/autoload.php"
+        colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory>tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>app</directory>
+        </include>
+    </source>
+    <php>
+        <!-- Set environment to testing mode -->
+        <env name="APP_ENV" value="testing"/>
+        <!-- Use file driver for maintenance mode -->
+        <env name="APP_MAINTENANCE_DRIVER" value="file"/>
+        <!-- Reduce password hashing rounds for faster tests -->
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <!-- Use array cache driver for testing -->
+        <env name="CACHE_STORE" value="array"/>
+        <!-- Configure SQLite as database connection -->
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <!-- Use in-memory database -->
+        <env name="DB_DATABASE" value=":memory:"/>
+        <!-- Set mail driver to array for testing -->
+        <env name="MAIL_MAILER" value="array"/>
+        <!-- Disable Laravel Pulse monitoring -->
+        <env name="PULSE_ENABLED" value="false"/>
+        <!-- Use synchronous queue driver -->
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <!-- Use array session driver for testing -->
+        <env name="SESSION_DRIVER" value="array"/>
+        <!-- Disable Laravel Telescope debugging -->
+        <env name="TELESCOPE_ENABLED" value="false"/>
+    </php>
+</phpunit>
