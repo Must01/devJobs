@@ -174,9 +174,11 @@ class JobSeeder extends Seeder
     }
 
     private function getRandomLogo()
-    {
-        $keywords = ['tech', 'office', 'startup', 'workspace', 'developer', 'coding'];
-        $keyword = $keywords[array_rand($keywords)];
-        return "https://source.unsplash.com/100x100/?" . $keyword;
-    }
+{
+    $id = rand(1, 1000);
+    return "https://picsum.photos/id/$id/100/100";
+}
+
+
+
 }
