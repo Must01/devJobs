@@ -6,11 +6,16 @@
 
 ## 📸 Screenshots
 
-![Homepage](<img width="1870" height="956" alt="image" src="https://github.com/user-attachments/assets/e12b5dbc-81fb-44d1-9739-8db37de0dbd6" />)
-![Job Results](<img width="1870" height="962" alt="image" src="https://github.com/user-attachments/assets/8988110f-05de-408b-acb7-e8cce234a438" />)
-![Job Details page](<img width="1882" height="952" alt="image" src="https://github.com/user-attachments/assets/2cacfc51-30b0-4594-9252-d6098307630e" />)
-![Companies page](<img width="1874" height="944" alt="image" src="https://github.com/user-attachments/assets/e9d33448-aa55-4cae-8ce5-6e1430a9b23a" />)
-![Blog page](<img width="1873" height="953" alt="image" src="https://github.com/user-attachments/assets/afcc79b4-2360-4f71-9b91-7180b06ff1e1" />)
+Homepage
+<img width="1870" height="956" alt="image" src="https://github.com/user-attachments/assets/e12b5dbc-81fb-44d1-9739-8db37de0dbd6" />
+Job Results
+<img width="1870" height="962" alt="image" src="https://github.com/user-attachments/assets/8988110f-05de-408b-acb7-e8cce234a438" />
+Job Details page
+<img width="1882" height="952" alt="image" src="https://github.com/user-attachments/assets/2cacfc51-30b0-4594-9252-d6098307630e" />
+Companies page
+<img width="1874" height="944" alt="image" src="https://github.com/user-attachments/assets/e9d33448-aa55-4cae-8ce5-6e1430a9b23a" />
+Blog page
+<img width="1873" height="953" alt="image" src="https://github.com/user-attachments/assets/afcc79b4-2360-4f71-9b91-7180b06ff1e1" />
 
 ## 🚀 Features
 
