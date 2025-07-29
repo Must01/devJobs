@@ -4,6 +4,15 @@
 
 ---
 
+## 📸 Screenshots
+
+![Homepage](https://via.placeholder.com/800x400?text=Homepage+Screenshot)
+![Job Results](https://via.placeholder.com/800x400?text=Job+Results+Screenshot)
+![Employer Profile](https://via.placeholder.com/800x400?text=Employer+Profile+Screenshot)
+![Job Card](https://via.placeholder.com/800x400?text=Job+Card+Screenshot)
+![Advanced Search](https://via.placeholder.com/800x400?text=Advanced+Search+Screenshot)
+![Tag Filter](https://via.placeholder.com/800x400?text=Tag+Filter+Screenshot)
+
 ## 🚀 Features
 
 ✅ Job listings with filters (tags, title, location)  
