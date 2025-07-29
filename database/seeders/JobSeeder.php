@@ -28,7 +28,6 @@ class JobSeeder extends Seeder
         $companies = [
             [
                 'name' => 'TechCorp Solutions',
-                'logo' => 'logos/techcorp.png',
                 'description' => 'Leading technology solutions provider specializing in web development and cloud infrastructure.',
                 'location' => 'San Francisco, CA',
                 'website' => 'https://techcorp.example.com',
@@ -37,7 +36,6 @@ class JobSeeder extends Seeder
             ],
             [
                 'name' => 'Digital Innovations Ltd',
-                'logo' => 'logos/digital-innovations.png',
                 'description' => 'Innovative digital agency creating cutting-edge web applications and mobile solutions.',
                 'location' => 'New York, NY',
                 'website' => 'https://digitalinnovations.example.com',
@@ -46,7 +44,6 @@ class JobSeeder extends Seeder
             ],
             [
                 'name' => 'StartupXYZ',
-                'logo' => 'logos/startupxyz.png',
                 'description' => 'Fast-growing startup disrupting the fintech industry with AI-powered solutions.',
                 'location' => 'Remote',
                 'website' => 'https://startupxyz.example.com',
@@ -55,7 +52,6 @@ class JobSeeder extends Seeder
             ],
             [
                 'name' => 'CloudNine Systems',
-                'logo' => 'logos/cloudnine.png',
                 'description' => 'Enterprise cloud solutions provider helping Fortune 500 companies migrate to the cloud.',
                 'location' => 'Austin, TX',
                 'website' => 'https://cloudnine.example.com',
@@ -64,7 +60,6 @@ class JobSeeder extends Seeder
             ],
             [
                 'name' => 'WebCraft Studio',
-                'logo' => 'logos/webcraft.png',
                 'description' => 'Creative web development studio crafting beautiful and functional websites.',
                 'location' => 'Seattle, WA',
                 'website' => 'https://webcraft.example.com',
@@ -73,7 +68,6 @@ class JobSeeder extends Seeder
             ],
             [
                 'name' => 'DataFlow Analytics',
-                'logo' => 'logos/dataflow.png',
                 'description' => 'Data analytics and machine learning company helping businesses make data-driven decisions.',
                 'location' => 'Boston, MA',
                 'website' => 'https://dataflow.example.com',
@@ -88,6 +82,9 @@ class JobSeeder extends Seeder
                 'email' => strtolower(str_replace([' ', '&'], ['', 'and'], $companyData['name'])) . '@example.com',
                 'password' => bcrypt('password')
             ]);
+
+            // Add random logo
+            $companyData['logo'] = $this->getRandomLogo();
 
             $employer = $user->employer()->create($companyData);
             $this->createJobsForEmployer($employer);
@@ -162,26 +159,24 @@ class JobSeeder extends Seeder
     {
         $descriptions = [
             'Senior Laravel Developer' => 'We are looking for an experienced Laravel developer to join our growing team. You will be responsible for developing and maintaining high-quality web applications using the Laravel framework.',
-
             'Frontend Vue.js Developer' => 'Join our frontend team as a Vue.js developer! You will work on creating responsive and interactive user interfaces for our web applications.',
-
             'Full Stack PHP Developer' => 'We need a versatile full-stack developer comfortable working with both frontend and backend technologies. You will be working with PHP, Laravel, JavaScript, and Vue.js.',
-
             'DevOps Engineer' => 'Help us scale our infrastructure as a DevOps engineer. You will work with AWS, Docker, Kubernetes, and various CI/CD tools to automate deployments.',
-
             'Senior React Developer' => 'We are seeking a senior React developer to join our frontend team. You will be responsible for building complex user interfaces using React and Redux.',
-
             'Backend Python Developer' => 'Join our backend team as a Python developer. You will work with Django, Flask, and various databases to build robust APIs and backend services.',
-
             'Mobile App Developer' => 'We are looking for a talented mobile app developer to create amazing mobile experiences using React Native or native development.',
-
             'Data Scientist' => 'Join our data team to help extract insights from large datasets. You will work with Python and machine learning libraries to build predictive models.',
-
             'Quality Assurance Engineer' => 'Ensure the quality of our software products as a QA engineer. You will design test cases and perform manual and automated testing.',
-
             'Technical Lead' => 'Lead a team of developers and drive technical decisions for our projects. You should have strong leadership skills and extensive development experience.'
         ];
 
         return $descriptions[$title] ?? 'Exciting opportunity to join our team and work on challenging projects with cutting-edge technologies.';
+    }
+
+    private function getRandomLogo()
+    {
+        $keywords = ['tech', 'office', 'startup', 'workspace', 'developer', 'coding'];
+        $keyword = $keywords[array_rand($keywords)];
+        return "https://source.unsplash.com/100x100/?" . $keyword;
     }
 }
